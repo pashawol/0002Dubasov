@@ -1,5 +1,37 @@
-.header{
-	
+.header {
+  text-align: center;
+  position: relative;
+  @include rfs(rem(40));
+  letter-spacing: rem(3px);
+
+  &__text {
+    color: #838b89;
+    font-family: Helvetica;
+    // font-size: rem40px;
+    font-weight: 400;
+    // Text style for "с, тратеги"
+    text-transform: uppercase;
+  }
+
+  &__down {
+    position: absolute;
+    text-align: center;
+    @include a-cent(x);
+    bottom: rem(40);
+    padding-bottom: rem(10);
+    width: 100%;
+
+    &::after {
+      content: '';
+      width: rem(29px);
+      height: rem(14px);
+      @include bgs;
+      background-image: url(../img/@2x/down.png);
+      @include a-cent(x);
+      bottom: 0;
+    }
+  }
+
   // 
   @include media-breakpoint-up(xl) {}
 
@@ -35,4 +67,4 @@
   @include media-breakpoint-down(sm) {}
 
   @include media-breakpoint-down(xs) {}
- }
+}

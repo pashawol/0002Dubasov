@@ -2,5 +2,21 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col
+					+e.soc-link(href="#" target="_blank")
+						+icon("inst")
+					
+					+e.soc-link(href="#" target="_blank")
+						+icon("twitter")
+					
+					+e.soc-link(href="#" target="_blank")
+						+icon("fb")
+					
+					+e.soc-link(href="#" target="_blank")
+						+icon("mail")
+					
+				.col-auto
+					a(href="#") ENG 
+					a(href="#") RU
 	// end .top-line

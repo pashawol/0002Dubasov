@@ -1,7 +1,12 @@
 mixin header()
 
 	// start HEADER.header
-	+b.HEADER.header.block-with-lazy
-		block
-	
+	+b.HEADER.header.block-with-lazy.section
+		.section__inner
+			block
+			.container
+				h1 Artur DUBASOV
+				+e.text стратегия/тактика
+				+e.down  ключевые проекты
+
 	// end HEADER.header
