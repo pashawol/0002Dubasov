@@ -218,15 +218,16 @@ $table-caption-color: $text-muted !default;
 $table-bg-level: -9 !default;
 $table-border-level: -6 !default;
 
+$border-radius: 0 !default;
 
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .375rem !default;
+$input-btn-padding-y: .9646rem !default;
 $input-btn-padding-x: .75rem !default;
 $input-btn-font-family: null !default;
-$input-btn-font-size: $font-size-base !default;
+$input-btn-font-size: 1rem !default;
 $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: .2rem !default;

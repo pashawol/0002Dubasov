@@ -1,9 +1,26 @@
 mixin s-form()
 	// start s-form
-	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s-form
-				
-			.row
+	+b.s-form.section.block-with-lazy.fp-scrollable#s-form&attributes(attributes)
+		.section__inner
+			.container
+				+b.s-form-nav
+					+e.title.show-form-wrap(data-title="Я хочу поговорить о....") Я хочу поговорить о....
+					+e.dropdown
+						+e.dropdown-item(data-title="Я хочу поговорить о деловом предложении....") Деловом предложении...
+						+e.dropdown-item(data-title="Я хочу поговорить о работе в команде....") Работе в команде...
+						+e.dropdown-item(data-title="Я хочу поговорить о другом.... ") Другое...
+				+form-wrap
+					input(type="hidden" class="order")
+					.row
+						.col-md-6
+							+input('Имя*')(required)
+							
+						.col-md-6
+							+input('Фамилия*')(required)
+						.col-md-6
+							+input('Почта*','email')(required)
+						.col-md-6
+							+input('Телефон*','tel')(required)
+					+input('О чем бы Вы хотели поговорить?*','textarea')(required)
+					+e.btn(type="submit") ОТПРАВИТЬ
 	// end s-form
