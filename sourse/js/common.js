@@ -5,7 +5,50 @@ const JSCCommon = {
 	// 	$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	// }
 	// /inputMask
+	inputLabel: function inputLabel() {
+		// для плаваюещего label
+		$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('.form-wrap__input-wrap').addClass('empty');
+		$('input, textarea').keyup(function () {
+			if ($(this).val().trim() !== '') {
+				$(this).closest('.form-wrap__input-wrap').removeClass('empty');
+			} else {
+				$(this).closest('.form-wrap__input-wrap').addClass('empty');
+			}
+		});
 
+		let selectedTd;
+		let body = document.querySelector('body')
+		body.onclick = function (event) {
+			if ($("div").is(".form-wrap__input-wrap--city")) {
+
+				let formWrap = event.target.closest('.form-wrap__input-wrap--city'); // (1)
+				let formWrapEl = document.querySelector('.form-wrap__input-wrap--city'); // (1)
+				let target = event.target; // где был клик? 
+				// if (!formWrap)  formWrapEl.classList.remove('focus'); // не на TD? тогда не интересует
+
+				if (!body.contains(formWrap)) formWrapEl.classList.remove('focus'); // (3)
+				else {
+
+					highlight(formWrap); // (4)
+				}
+			}
+		};
+
+		function highlight(td) {
+
+			selectedTd = td;
+			selectedTd.classList.add('focus'); // подсветить новый td
+
+			// console.log(selectedTd)
+		}
+		// $('.form-wrap__input-wrap ').on('focus',  '.bx-ui-sls-fake', function () {
+		// 	if ($(this).val().trim() !== '') {
+		// 		$(this).closest('.form-wrap__input-wrap').removeClass('empty');
+		// 	} else {
+		// 		$(this).closest('.form-wrap__input-wrap').addClass('empty');
+		// 	}
+		// });
+	},
 };
 
 function eventHandler() {
@@ -14,6 +57,7 @@ function eventHandler() {
 	svg4everybody({});
 
 
+	JSCCommon.inputLabel();
 	// JSCCommon.inputMask();
 
 	// JSCCommon.CustomInputFile();
@@ -36,7 +80,11 @@ function eventHandler() {
 		responsiveHeight: 550,
 		// normalScrollElements: '.s-form',
 	});
-
+	$('.scroll-to').click(function (e) {
+		var arr = $("#fullpage .section").length;
+		e.preventDefault();
+		fullpage_api.moveTo(arr);
+	})
 	$(document).on('click', ".show-form-wrap", function () {
 		$(this).text($(this).data("title"))
 		$('.s-form-nav__dropdown').slideToggle();

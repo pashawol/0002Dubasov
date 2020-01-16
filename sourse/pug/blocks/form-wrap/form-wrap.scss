@@ -22,6 +22,8 @@
 	}
 
 	&__input-wrap {
+		position: relative;
+
 		@include media-breakpoint-up(xl) {
 
 			margin-bottom: rem(40);
@@ -47,6 +49,27 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: rem(342);
+	}
+
+	.empty &__title {
+		opacity: 0;
+		transform: translateY(.6em);
+	}
+
+	&__title {
+		font-size: 0.5rem;
+		position: absolute;
+		left: rem(18);
+		// top: 0;
+		bottom: 105%;
+		// opacity: 0;
+		@include mt;
+
+	}
+
+	&__input:focus+&__title {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	label {
