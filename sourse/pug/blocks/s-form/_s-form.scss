@@ -7,12 +7,13 @@
 
 		@include media-breakpoint-up(xl) {
 
-			min-height: rem(1000px);
+			min-height: 700px;
 		}
 
 		@include media-breakpoint-up(md) {
 
-			min-height: rem(1200px);
+			min-height: 700px;
+			// min-height: rem(1200px);
 		}
 
 		display: flex;
