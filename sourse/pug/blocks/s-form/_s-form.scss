@@ -1,6 +1,20 @@
 .s-form {
 	.section__inner {
-		min-height: rem(800px);
+		@media (min-width: 1920px) {
+
+			min-height: rem(950px);
+		}
+
+		@include media-breakpoint-up(xl) {
+
+			min-height: rem(1000px);
+		}
+
+		@include media-breakpoint-up(md) {
+
+			min-height: rem(1200px);
+		}
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

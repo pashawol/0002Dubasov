@@ -85,6 +85,13 @@ function eventHandler() {
 		e.preventDefault();
 		fullpage_api.moveTo(arr);
 	})
+
+	$('.header__down').click(function (e) {
+		// var arr = $("#fullpage .section").length;
+		e.preventDefault();
+		fullpage_api.moveTo(2);
+	})
+
 	$(document).on('click', ".show-form-wrap", function () {
 		$(this).text($(this).data("title"))
 		$('.s-form-nav__dropdown').slideToggle();

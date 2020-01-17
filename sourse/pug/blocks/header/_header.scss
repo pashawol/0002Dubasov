@@ -14,6 +14,7 @@
   }
 
   &__down {
+    cursor: pointer;
     position: absolute;
     text-align: center;
     @include a-cent(x);
