@@ -69,7 +69,7 @@ function eventHandler() {
 		// autoScrolling: true,
 		// scrollOverflow: true,
 		// fixedElements: '.top-line',
-		responsiveWidth: 992,
+		responsiveWidth: 340,
 		responsiveHeight: 550 // normalScrollElements: '.s-form',
 
 	});

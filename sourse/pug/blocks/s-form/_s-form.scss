@@ -12,10 +12,12 @@
 
 		@include media-breakpoint-up(md) {
 
-			min-height: 700px;
 			// min-height: rem(1200px);
+			min-height: 700px;
 		}
 
+		// @media (max-width: 340px) 
+		min-height: 800px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
