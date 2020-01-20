@@ -10,7 +10,7 @@
     // font-size: rem40px;
     font-weight: 400;
     // Text style for "с, тратеги"
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 
   &__down {
@@ -48,6 +48,10 @@
        */
       animation-fill-mode: both;
     }
+  }
+
+  h1 {
+    line-height: 1;
   }
 
   // 

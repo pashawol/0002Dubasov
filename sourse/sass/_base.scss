@@ -19,7 +19,7 @@ html {
 
 body,
 html {
-	@media (min-width: 1440px) {
+	@media (min-width: 1200px) {
 
 		font-size: $em-base;
 	}
@@ -575,7 +575,14 @@ a {
 	}
 
 	&:nth-child(even) &__img-wrap {
+
 		// text-align: right;
+		@include media-breakpoint-up(lg) {
+
+			text-align: right;
+			margin-left: rem(40);
+			margin-right: rem(40);
+		}
 	}
 
 	&__img-wrap {
@@ -584,6 +591,7 @@ a {
 
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
+			// text-align: right;
 			text-align: left;
 		}
 
@@ -612,8 +620,8 @@ a {
 				@include transition(all .6s $ease-in-back);
 
 				&:hover {
-					transform: translate3d(0, -2px, -1px);
-					animation: anim 2s;
+					// transform: translate3d(0, -2px, -1px);
+					// animation: anim 2s;
 				}
 			}
 

@@ -52,8 +52,9 @@
 	}
 
 	.empty &__title {
-		opacity: 0;
-		transform: translateY(.6em);
+		// opacity: 0; 
+		top: rem(20);
+		font-size: 1rem;
 	}
 
 	&__title {
@@ -61,7 +62,9 @@
 		position: absolute;
 		left: rem(18);
 		// top: 0;
-		bottom: 105%;
+		top: rem(-22);
+		pointer-events: none;
+		// bottom: 50%;
 		// opacity: 0;
 		@include mt;
 
@@ -69,7 +72,8 @@
 
 	&__input:focus+&__title {
 		opacity: 1;
-		transform: translateY(0);
+		top: rem(-22);
+		font-size: .6rem;
 	}
 
 	label {
