@@ -580,8 +580,7 @@ a {
 		@include media-breakpoint-up(lg) {
 
 			text-align: right;
-			margin-left: rem(40);
-			margin-right: rem(40);
+
 		}
 	}
 
@@ -591,6 +590,8 @@ a {
 
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
+			margin-left: rem(40);
+			margin-right: rem(40);
 			// text-align: right;
 			text-align: left;
 		}

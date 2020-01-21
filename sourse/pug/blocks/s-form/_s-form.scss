@@ -68,7 +68,7 @@
 }
 
 .s-form-nav {
-	border-bottom: 5px solid #c9cdde;
+	border-bottom: 3px solid #c9cdde;
 	margin-bottom: rem(40);
 
 	&__title {
@@ -91,6 +91,24 @@
 			background-size: 100%;
 			background-repeat: no-repeat;
 			background-position: center;
+
+			animation-name: blinkj;
+			/**
+       * The animation should take 1.4 seconds
+       */
+			animation-duration: 3s;
+			/**
+       * It will repeat itself forever
+       */
+			animation-iteration-count: infinite;
+			/**
+       * This makes sure that the starting style (opacity: .2)
+       * of the animation is applied before the animation starts.
+       * Otherwise we would see a short flash or would have
+       * to set the default styling of the dots to the same
+       * as the animation. Same applies for the ending styles.
+       */
+			animation-fill-mode: both;
 		}
 	}
 

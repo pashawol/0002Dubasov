@@ -1,11 +1,12 @@
 .header {
   text-align: center;
   position: relative;
-  @include rfs(rem(40));
+  @include rfs(rem(36));
   letter-spacing: rem(3px);
 
   &__text {
     color: #838b89;
+    @include rfs(rem(40));
     font-family: Helvetica;
     // font-size: rem40px;
     font-weight: 400;
