@@ -55,9 +55,12 @@
 		// opacity: 0; 
 		top: rem(20);
 		font-size: 1rem;
+		text-transform: none;
+		opacity: 1;
 	}
 
 	&__title {
+		text-transform: uppercase;
 		font-size: 0.6rem;
 		position: absolute;
 		left: rem(18);
@@ -67,6 +70,7 @@
 		// bottom: 50%;
 		// opacity: 0;
 		@include mt;
+		opacity: 0;
 
 	}
 
@@ -74,6 +78,7 @@
 		opacity: 1;
 		top: rem(-22);
 		font-size: .6rem;
+		text-transform: uppercase;
 	}
 
 	label {
