@@ -533,7 +533,7 @@ a {
 
 	&__row {
 		align-items: center;
-		@include roww(31);
+		@include roww(24);
 
 		p {
 			letter-spacing: rem(2.62px);
