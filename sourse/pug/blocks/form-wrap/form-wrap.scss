@@ -106,7 +106,11 @@
 }
 
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+	h1 {
+		font-size: 120px;
+	}
+}
 
 @include media-breakpoint-up(lg) {}
 
